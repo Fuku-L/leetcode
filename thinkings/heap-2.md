@@ -530,7 +530,7 @@ class Solution(object):
         for _ in range(k):
             diff, fr, to = heapq.heappop(h)
             if to + 1 < len(nums):
-                heapq.heappush((nums[to + 1] - nums[fr], fr, to + 1))
+                heapq.heappush(h,(nums[to + 1] - nums[fr], fr, to + 1))
 
         return diff
 ```
